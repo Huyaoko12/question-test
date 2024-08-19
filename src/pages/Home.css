@@ -1,0 +1,94 @@
+/* Đặt màu nền xanh cho toàn bộ trang */
+body {
+    background-color: #2a30d0; /* Màu nền xanh */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Chọn font mặc định */
+}
+
+/* Đảm bảo header và footer không bị ảnh hưởng */
+header, footer {
+    background-color: #fff; /* Ví dụ: màu nền cho header và footer */
+    color: #333; /* Ví dụ: màu chữ cho header và footer */
+    padding: 20px;
+}
+
+/* Thiết lập màu nền cho danh sách câu hỏi */
+.question-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #2a30d0; /* Màu nền xanh */
+}
+
+/* Thiết lập màu nền cho các thẻ câu hỏi */
+.question-card {
+    background-color: #d64545; /* Màu nền của thẻ */
+    color: white;
+    width: 150px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.question-card:hover {
+    transform: translateY(-5px);
+}
+
+.question-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Cải thiện phần thêm câu hỏi */
+.add-question-form {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px; /* Điều chỉnh kích thước ô nhập */
+}
+
+.add-question-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.add-question-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.add-question-form button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-question-form button:hover {
+    background-color: #0056b3;
+}
+
+.add-question-form .error {
+    color: #d64545;
+    margin-top: 10px;
+    font-size: 0.875rem;
+}
