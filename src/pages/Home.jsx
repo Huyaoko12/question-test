@@ -41,11 +41,12 @@ const Home = () => {
         if (newQuestion.trim()) {
             try {
                 const response = await axios.post('https://66c2cb6dd057009ee9bdec9e.mockapi.io/api/Question/questions', {
-                    text: newQuestion,
-                    likedByUser: false // Thêm trường để theo dõi trạng thái like
+                    text: newQuestion.trim(),
+                    likedByUser: false
                 });
                 setQuestions([...questions, response.data]);
                 setNewQuestion('');
+                setError(''); // Xóa thông báo lỗi nếu câu hỏi hợp lệ
             } catch (err) {
                 console.error('Error adding question:', err);
                 setError('Unable to add question. Please try again later.');
@@ -73,7 +74,7 @@ const Home = () => {
                 await axios.put(`https://66c2cb6dd057009ee9bdec9e.mockapi.io/api/Question/questions/${id}`, {
                     ...questionToUpdate,
                     likeCount: updatedLikeCount,
-                    likedByUser: !questionToUpdate.likedByUser // Chuyển đổi trạng thái like
+                    likedByUser: !questionToUpdate.likedByUser 
                 });
                 setQuestions(questions.map(question =>
                     question.id === id ? { ...question, likeCount: updatedLikeCount, likedByUser: !question.likedByUser } : question
@@ -91,7 +92,7 @@ const Home = () => {
 
     const getAnswerForQuestion = (questionId) => {
         const answer = answers.find((ans) => ans.questionId === questionId);
-        return answer ? answer.answer : 'No answer yet.';
+        return answer ? answer.answer : 'Câu hỏi chưa được trả lời!!';
     };
 
     return (
@@ -111,7 +112,7 @@ const Home = () => {
             </div>
             {selectedQuestion && (
                 <div className="answer-display">
-                    <h3>Answer for: {selectedQuestion.text}</h3>
+                    <h3>Câu trả lời cho câu hỏi: {selectedQuestion.text}</h3>
                     <p>{getAnswerForQuestion(selectedQuestion.id)}</p>
                 </div>
             )}
@@ -120,9 +121,9 @@ const Home = () => {
                     type="text"
                     value={newQuestion}
                     onChange={(e) => setNewQuestion(e.target.value)}
-                    placeholder="Enter your question"
+                    placeholder="Nhập câu hỏi của bạn"
                 />
-                <button onClick={handleAddQuestion}>Add Question</button>
+                <button onClick={handleAddQuestion}>Thêm câu hỏi</button>
             </div>
             <Footer />
         </div>

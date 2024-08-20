@@ -1,31 +1,27 @@
-/* Đặt màu nền xanh cho toàn bộ trang */
 body {
-    background-color: #2a30d0; /* Màu nền xanh */
+    background-color: #2a30d0; 
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif; /* Chọn font mặc định */
+    font-family: Arial, sans-serif;
 }
 
-/* Đảm bảo header và footer không bị ảnh hưởng */
 header, footer {
-    background-color: #fff; /* Ví dụ: màu nền cho header và footer */
-    color: #333; /* Ví dụ: màu chữ cho header và footer */
+    background-color: #fff; 
+    color: #333;
     padding: 20px;
 }
 
-/* Thiết lập màu nền cho danh sách câu hỏi */
 .question-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     padding: 20px;
-    background-color: #2a30d0; /* Màu nền xanh */
+    background-color: #2a30d0;
 }
 
-/* Thiết lập màu nền cho các thẻ câu hỏi */
 .question-card {
-    background-color: #d64545; /* Màu nền của thẻ */
+    background-color: #d64545; 
     color: white;
     width: 150px;
     padding: 15px;
@@ -46,7 +42,6 @@ header, footer {
     line-height: 1.5;
 }
 
-/* Cải thiện phần thêm câu hỏi */
 .add-question-form {
     margin: 20px auto;
     padding: 20px;
@@ -54,7 +49,7 @@ header, footer {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 300px; /* Điều chỉnh kích thước ô nhập */
+    max-width: 300px;
 }
 
 .add-question-form h2 {

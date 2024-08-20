@@ -36,7 +36,7 @@
 }
 
 .question-card-container {
-    background-color: #f15555; /* Màu đỏ nhạt cho cả ô */
+    background-color: #f15555;
     padding: 10px;
     border-radius: 5px;
     position: relative;
@@ -44,7 +44,7 @@
 
 .answer-display {
     margin-top: 10px;
-    background-color: #ffe6e6; /* Màu đỏ nhạt hơn cho phần câu trả lời */
+    background-color: #ffe6e6;
     padding: 10px;
     border-radius: 5px;
 }

@@ -103,7 +103,7 @@ const AdminPanel = () => {
 
     const getAnswerForQuestion = (questionId) => {
         const answer = answers.find((ans) => ans.questionId === questionId);
-        return answer ? answer.answer : 'No answer yet.';
+        return answer ? answer.answer : 'Chưa trả lời câu hỏi.';
     };
 
     return (
@@ -129,18 +129,18 @@ const AdminPanel = () => {
             </div>
             {selectedQuestion && (
                 <div className="answer-form">
-                    <h3>Answer Question: {selectedQuestion.text}</h3>
+                    <h3>Câu hỏi: {selectedQuestion.text}</h3>
                     <form onSubmit={handleSubmitAnswer}>
                         <textarea
                             value={answer}
                             onChange={(e) => setAnswer(e.target.value)}
-                            placeholder="Type your answer here..."
+                            placeholder="Nhập câu trả lời..."
                             rows="4"
                             cols="50"
                             required
                         />
                         <br />
-                        <button type="submit">Submit Answer</button>
+                        <button type="submit">Gửi</button>
                     </form>
                 </div>
             )}
