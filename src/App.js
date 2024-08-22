@@ -35,8 +35,6 @@ function App() {
 
                 <Route path="*" element={<Navigate to="/login" />} /> {/* Điều hướng tất cả các trang không tồn tại đến /login */}
             </Routes>
-            <Footer />
-
         </Router>
     );
 }
